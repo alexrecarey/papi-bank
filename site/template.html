@@ -36,11 +36,11 @@
   .switcher button{
     font-family:'Fredoka',sans-serif;font-size:1.15rem;font-weight:600;
     border:none;border-radius:999px;padding:12px 34px;cursor:pointer;
-    background:#fff;color:var(--muted);box-shadow:0 4px 14px rgba(34,48,79,.12);
+    background:transparent;color:#fff;box-shadow:none;
     min-height:52px;transition:transform .12s;
   }
   .switcher button:active{transform:scale(.96);}
-  .switcher button.active{background:var(--navy);color:#fff;}
+  .switcher button.active{background:#fff;color:var(--navy);box-shadow:0 4px 14px rgba(34,48,79,.12);}
   .balance-card{
     background:var(--card);border-radius:28px;padding:30px 24px;text-align:center;
     box-shadow:0 12px 32px rgba(34,48,79,.14);position:relative;overflow:hidden;
