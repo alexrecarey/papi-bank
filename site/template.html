@@ -73,6 +73,8 @@
   .move .date{color:var(--muted);font-size:.85rem;font-weight:600;margin-top:2px;}
   .move .amt{font-family:'Fredoka',sans-serif;font-weight:700;font-size:1.25rem;white-space:nowrap;}
   .move .amt.pos{color:var(--green);} .move .amt.neg{color:var(--red);}
+  .move .right{text-align:right;flex:0 0 auto;}
+  .move .bal{color:#b7bdcb;font-size:.75rem;font-weight:600;margin-top:4px;white-space:nowrap;}
   .more{display:block;width:100%;margin:8px 0 0;padding:18px;border:none;border-radius:20px;
     background:var(--teal);color:#fff;font-family:'Fredoka',sans-serif;font-size:1.2rem;font-weight:600;
     cursor:pointer;box-shadow:0 8px 20px rgba(46,196,182,.35);min-height:60px;}
@@ -178,7 +180,8 @@ function render(){
     row.innerHTML =
       '<div class="ic">' + iconFor(m) + '</div>' +
       '<div class="info"><div class="desc"></div><div class="date">' + prettyDate(m.date) + '</div></div>' +
-      '<div class="amt ' + (pos ? 'pos' : 'neg') + '">' + (pos ? '+' : '−') + money(m.amount).slice(1) + '</div>';
+      '<div class="right"><div class="amt ' + (pos ? 'pos' : 'neg') + '">' + (pos ? '+' : '−') + money(m.amount).slice(1) + '</div>' +
+      '<div class="bal">Balance ' + money(m.balance) + '</div></div>';
     row.querySelector('.desc').textContent = m.desc;
     box.appendChild(row);
   });
